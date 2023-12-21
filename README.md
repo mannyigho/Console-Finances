@@ -1,2 +1,2 @@
-# Financial-Analysis-Tool
-Financial-Analysis-Tool
+# Console-Finances
+Console Finances
