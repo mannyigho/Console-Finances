@@ -86,3 +86,39 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+//Calculating Total Months
+var numberOfMonths = finances.length;
+console.log("Total Months: " + numberOfMonths);
+
+var netTotalPL = 0;
+var averageChange = "";
+var TotalChange = 0;
+var oldValue = 0;
+var incDecArray = [];
+
+for(i=0; i<finances.length; i++){
+  //Calculating NET Total Profit/Loss
+  netTotalPL += finances[i][1];
+  averageChange = Number(finances[i][1]) - Number(oldValue);
+  //console.log(finances[i][0] + " => " + finances[i][1] + " - " + oldValue + " = " + averageChange);
+  //Push all the values into another array for further processing
+  incDecArray.push(averageChange);
+  //Sum up all the average Change values
+  TotalChange += averageChange;
+  //Override the previous old value with a new old value
+  oldValue = parseInt(finances[i][1]);
+}
+
+console.log("Total: $" + netTotalPL);
+console.log("Average Change: " +  (TotalChange - finances[0][1])/(numberOfMonths - 1));
+//Greatest Increase in Profit/Loss
+//Sort the values in the array in descending order and get the first value which is the greatest value
+incDecArray.sort(function(a, b){return b - a});
+var greatestValue = incDecArray[0];
+console.log("Greatest Increase in Profits/Losses: Feb-2012: ($" + greatestValue + ")");
+//Greatest Decrease in Profits/Losses
+//Sort the values in the array in ascending order and get the first value which is the lowest value
+incDecArray.sort(function(a, b){return a - b});
+var lowestValue = incDecArray[0];
+console.log("Greatest Decrease in Profits/Losses: Feb-2012: ($" + lowestValue + ")");
