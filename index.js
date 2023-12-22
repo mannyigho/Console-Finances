@@ -94,6 +94,7 @@ console.log("Total Months: " + numberOfMonths);
 var netTotalPL = 0;
 var averageChange = "";
 var TotalChange = 0;
+var totalAverageChange = 0;
 var oldValue = 0;
 var incDecArray = [];
 
@@ -111,7 +112,8 @@ for(i=0; i<finances.length; i++){
 }
 
 console.log("Total: $" + netTotalPL);
-console.log("Average Change: " +  (TotalChange - finances[0][1])/(numberOfMonths - 1));
+totalAverageChange = (TotalChange - finances[0][1])/(numberOfMonths - 1);
+console.log("Average Change: " +  totalAverageChange.toFixed(2));
 //Greatest Increase in Profit/Loss
 //Sort the values in the array in descending order and get the first value which is the greatest value
 incDecArray.sort(function(a, b){return b - a});
