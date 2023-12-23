@@ -90,6 +90,7 @@ var finances = [
 //Calculating Total Months
 var numberOfMonths = finances.length;
 console.log("Total Months: " + numberOfMonths);
+document.getElementById("totalMonths").innerHTML = "Total Months: " + numberOfMonths;
 
 var netTotalPL = 0;
 var averageChange = "";
@@ -112,15 +113,19 @@ for(i=0; i<finances.length; i++){
 }
 
 console.log("Total: $" + netTotalPL);
+document.getElementById("netTotal").innerHTML = "Total: " + netTotalPL;
 totalAverageChange = (TotalChange - finances[0][1])/(numberOfMonths - 1);
 console.log("Average Change: " +  totalAverageChange.toFixed(2));
+document.getElementById("avgChange").innerHTML = "Average Change: " + totalAverageChange.toFixed(2);
 //Greatest Increase in Profit/Loss
 //Sort the values in the array in descending order and get the first value which is the greatest value
 incDecArray.sort(function(a, b){return b - a});
 var greatestValue = incDecArray[0];
 console.log("Greatest Increase in Profits/Losses: Feb-2012: ($" + greatestValue + ")");
+document.getElementById("increasePL").innerHTML = "Greatest Increase in Profits/Losses: Feb-2012: ($" + greatestValue + ")";
 //Greatest Decrease in Profits/Losses
 //Sort the values in the array in ascending order and get the first value which is the lowest value
 incDecArray.sort(function(a, b){return a - b});
 var lowestValue = incDecArray[0];
 console.log("Greatest Decrease in Profits/Losses: Feb-2012: ($" + lowestValue + ")");
+document.getElementById("decreasePL").innerHTML = "Greatest Decrease in Profits/Losses: Feb-2012: ($" + lowestValue + ")";
