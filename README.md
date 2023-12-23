@@ -1,5 +1,6 @@
 ## Console-Finances
 Console Finances
+
 ## Description
 
 This project aims to analyze the financial records of a company. This is done using Javascript to fetch the records in the finances array inside the index.js file. We are expected to draw up the below details from the above mentioned finances array:
@@ -25,7 +26,7 @@ Download the Console-Finances folder unto anywhere on your system and you are go
 
 TO view the outcome of this project, simply open the index.html file in a browser by double-clicking on it. Right-click anywhere on the webpage and click "Inspect". At the section of the screen that popups below or on the right-hand-side, depending on how the settings on your browser is, click on the "Console" tab to view the result.
 
-    (./assets/images/screenshot.png)
+    (../assets/images/screenshot.png)
 
 ## Credits
 
